@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+
+      <script type = "text/javascript" language ="javascript">
+           $(document).ready(function(){
+         var title = $("em").attr("title");
+         $("#divid").text(title); 
+    });
+      </script>
+      </head>
+      <body>
+          <div>
+              <em title = "This is first para">First Paragrapg</em>
+              <p id = "myid">This is Second para</p>
+              <div id = "divid"></div>
+          </div>
+      </body>
+</html>      
