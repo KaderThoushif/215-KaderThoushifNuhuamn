@@ -1,0 +1,46 @@
+.nav-item{
+  /* margin-right: 10px; */
+  padding: 14px 20px;
+  font-weight: 500;
+}
+.navbar{
+  background-color:  rgb(243, 241, 241);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar .actv {
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+.calign {
+  align-items: center;
+  justify-content: center;
+}
+/* .actv > a:hover {
+  background-color: #ddd;
+  color: #000;
+
+} */
+.nav-item:hover {
+  background-color: #ddd;
+
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.hov:hover {
+  background-color: #ddd;
+  
+}
+mat-icon{
+
+  color: rgb(0, 0, 0);
+}
+.serch{
+  padding-left: 8%;
+}
+li {
+  padding: 1rem 0.5rem;
+}

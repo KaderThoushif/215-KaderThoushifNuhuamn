@@ -1,0 +1,34 @@
+<h1 style="font-family: 'poppins', sans-serif;" class="text-center py-3">Product Store</h1>
+<nav class="navbar navbar-expand-sm navbar-light">
+  <div class="container-fluid">
+    <!-- <h1 style="color:aliceblue; margin-left: 20px; margin-right: 20px;">Product Store</h1> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="mynavbar">
+      <ul class="navbar-nav me-auto" >
+        <li class="nav-item">
+          <a (click)="home()">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a (click)="gotoDash()">Orders</a>
+        </li>
+        <li class="nav-item ">
+          <a (click)="addProduct()">Products</a>
+        </li>
+      </ul>
+
+      <div class="d-flex calign ">
+        <!-- <li class="nav-item"> -->
+        <a (click)="orders()" class="hov" style="margin-right: 20px;padding: 14px 16px;">My Orders</a>
+        <!-- </li> -->
+        <a (click)="cart()" class="hov" style="color:white; margin-right: 20px;padding: 11px 16px;">
+          <mat-icon>add_shopping_cart</mat-icon>
+          <span style="font-size: 10px; position: absolute;" class="badge bg-danger">{{badgenumber}}</span>
+        </a>
+        <a class="hov" routerLink="/login" style="margin-right: 20px;padding: 14px 16px;">Logout</a>
+        <!-- <button class=" btn mx-3 hov">Logout</button> -->
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <app-navigation></app-navigation>
+    <ng-container *ngIf="cartproduct.length ===0">
+        <div class="container">
+            <div class="card">
+                <h5 class="card-title"> My Cart </h5>
+            </div>
+            <div class="center">
+                <img src="assets/cart.jpeg" alt="">
+                <h4><b>your cart is empty</b></h4>
+                <h6>Add item to it now</h6>
+                <button (click)="gotoDash()" class=" btn btn-primary"> Shop now</button>
+            </div>
+        </div>
+
+    </ng-container>
+
+
+    <ng-container *ngIf="cartproduct.length !=0">
+        <div class="container mt-5 mb-5">
+            <div class="cart-product">
+                <table class="table table-resonsive  table-secondary table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Order.No</th>
+                            <th>Product Code</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pd of cartproduct ;let i= index">
+                            <td>{{i+1}}</td>
+                            <td>{{pd.productCode}}</td>
+                            <td>{{pd.description}}</td>
+                            <td>{{pd.unitPrice}}</td>
+                            <td>{{pd.remarks}}</td>
+
+                            <td><button (click)="delet(pd)" class="btn" type="button">
+                                    <mat-icon style="color: red;">delete</mat-icon>
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td style="float: right;"><strong>Total Amount :{{grandtotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container my-3">
+                    <div class="row g-2">
+                        <div class="col">
+                            <button type="button" class="w-100 btn btn-secondary" (click)="orderFun()">Order
+                                now</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" (click)="gotoDash()" class="w-100 btn btn-dark">Shop
+                                Now</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" (click)="removeall()" class="w-100 btn btn-danger">Remove
+                                All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+<footer>
+    <div class="top_header">
+        <section>
+            <span><i class="fa fa-map-marker"></i></span>
+            <span>India </span>
+          </section>
+          <section>
+            <span><i class="fa fa-phone"></i></span>
+            <span>(+91) 8976561276</span>
+          </section>
+          <section>
+            <span><i class="fa fa-envelope"></i></span>
+            <span>productstore@websitename.com</span>
+          </section>
+    </div>
+    <span class="border-shape"></span>
+    <div class="bottom_content">
+        <section>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-telegram"></i></a>
+        </section>
+        <section>
+            <a href=home()>Home</a>
+            <a href=orders()>Orders</a>
+            <a href=products()>products</a>
+            <a href=mycart()>MyOrders</a>
+        </section>
+    </div>
+    <div class="copyright">
+        Copyright © 2022 websitename - All rights reserved
+    </div>
+</footer> -

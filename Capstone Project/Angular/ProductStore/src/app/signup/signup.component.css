@@ -1,0 +1,39 @@
+.card {
+    border:none;
+    width: 500px;
+    padding: 40px;
+    margin: 100px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.card h1, h6 {
+    color: #fff;
+}
+label {
+    color: #fff;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    
+    background-color: #000;
+
+
+    
+
+
+
+    background-image: url(../../assets/cubes.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
